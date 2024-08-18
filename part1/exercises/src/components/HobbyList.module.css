@@ -1,0 +1,19 @@
+.h2 {
+    text-decoration: underline;
+    color: red;
+    text-align: left;
+}
+
+.p {
+    color: black;
+    text-align: left;
+    border: 2px solid black;
+    padding: 20px;
+    display: inline-block;
+    margin: 0;
+}
+
+.div {
+    text-align: left;
+}
+

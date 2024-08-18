@@ -1,15 +1,26 @@
 .movieText {
-   color: rgb(212, 187, 47);
+   color: black;
    font-size: medium;
    text-align: left;
 }
 
 .movieHeading {
-   color: goldenrod;
+   color: red;
    text-align: left;
    font-size: larger;
+   text-decoration: underline;
 }
 
 body{
    padding: 50px;
+}
+
+ol {
+   color: black;
+   text-align: left;
+   border: 2px solid red;
+   padding: 20px;
+   display: inline-block;
+   margin: 0;
+   padding: 20px;
 }
