@@ -1,25 +1,5 @@
 import { useState } from 'react';
-
-[
-   {
-     "name": "Stovetop Mac and Cheese",
-     "author": "Stephanie Melchione",
-     "description": "This Creamy Stovetop Mac and Cheese is the BEST 30-minute meal for a busy week. Your family will love it every time!",
-     "website": "https://thecozycook.com/stovetop-mac-and-cheese/",
-     "recipeImage": "https://thecozycook.com/wp-content/uploads/2021/10/Stovetop-Mac-and-Cheese-2.jpg",
-     "authorImage": "https://thecozycook.com/wp-content/uploads/2021/11/The-Cozy-Cook.jpg",
-     "ingredients": [
-       "uncooked macaroni",
-       "butter",
-       "flour",
-       "heavy cream",
-       "milk"
-     ]
-   }
- ]
  
-
-
 const RecipeAuthor = () => {
    let authorLink = "https://thecozycook.com/stovetop-mac-and-cheese/";
    let authorPhoto = "https://thecozycook.com/wp-content/uploads/2021/11/The-Cozy-Cook.jpg";
@@ -41,16 +21,17 @@ const RecipeIngredients = () => {
        "butter",
        "flour",
        "heavy cream",
-       "milk"];
+       "milk", "cat litter", "dog"];
+
+let ingredientListItems = ingredients.map((ingredient, index) => {
+   return <li key= {index}>{ingredient}</li>
+})
+
    return(
       <div>
          <h3>Recipe Ingredients</h3>
-         <ul>
-            <li>{ingredients[0]}</li>
-            <li>{ingredients[1]}</li>
-            <li>{ingredients[2]}</li>
-            <li>{ingredients[3]}</li>
-            <li>{ingredients[4]}</li>
+         <ul style={{ textAlign: "left" }}>
+            {ingredientListItems}
          </ul>
       </div>
    );
@@ -60,8 +41,8 @@ const RecipeDescription = () => {
    return (
       <div> 
          <div>
-            <h1></h1>
-            <p></p>
+            <h1>Macoroni</h1>
+            <p>This cheeze be awesome yall</p>
          </div>
          <div className="recipePhotoBlock">
             <RecipeIngredients />

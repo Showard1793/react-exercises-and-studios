@@ -13,21 +13,7 @@ const [recipeStatus, setRecipeStatus] = useState(false);
       setRecipeStatus(true)
    }
 
-   return recipeStatus = true? 
-    (
-      <div style={{paddingTop: "50px"}}>
-         <form onSubmit={handleSubmit}>
-            <label>Have you tried this recipe? Add your notes here: {notes.value} <input type="text" value={notes} onChange={handleChange} />
-            </label>
-            <input type="submit" />
-         </form>
-
-         <p>My Recipe Notes aren't here!</p>
-
-         <p>I have not tried this recipe!</p>
-      </div>
-   ) 
-   : (
+   return (
    <div style={{paddingTop: "50px"}}>
    <form onSubmit={handleSubmit}>
       <label> This recipe does not exist {notes.value} <input type="text" value={notes} onChange={handleChange} />
@@ -35,9 +21,9 @@ const [recipeStatus, setRecipeStatus] = useState(false);
       <input type="submit" />
    </form>
 
-   <p>My Recipe Notes aren't here!</p>
+   <p>{notes.length ? notes : "My Recipe notes are not here!"}</p>
 
-   <p>I have not tried this recipe!</p>
+   <p>{recipeStatus ? "I tried the recipe!" : "I have not tried this recipe!"}</p>
 </div>
 ) 
 }

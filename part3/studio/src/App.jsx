@@ -8,12 +8,11 @@ function App() {
 
   return (
     <>
-      <h1>Test</h1>
       <div className="App">
         <RecipeDisplay />
         <div className="recipePhotoBlock">
           <BoardAssignment />
-         {/*  <StatusChange /> */}
+          <StatusChange />
         </div>
       </div>
     </>
